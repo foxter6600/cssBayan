@@ -1,0 +1,139 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 80%;
+  height: auto;
+  background-color: rgb(196, 216, 216);
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.title {
+  text-align: center;
+  padding-top: 2rem;
+  font-size: 3rem;
+  margin: 0;
+}
+
+@media (max-width: 1180px) {
+  .title {
+    font-size: 2rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 1.5rem;
+    padding-top: 1rem;
+  }
+}
+
+.memes-list {
+  padding: 0;
+  height: auto;
+}
+
+.memes-list__title {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+@media (max-width: 1180px) {
+  .memes-list__title {
+    font-size: 1.5rem;
+    margin: 0.6rem 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .memes-list__title {
+    font-size: 1rem;
+    margin: 0.4rem 0;
+  }
+}
+
+.memes-list__item-box {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.plus {
+  width: 2rem;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.memes-list__item {
+  list-style: none;
+  width: 100%;
+}
+
+.memes-list__item label {
+  padding: 0.2rem;
+  display: block;
+  line-height: 120%;
+  color: #000;
+  background-color: #608196;
+  border-bottom: 0.1rem solid #afb6bd;
+}
+
+@media (max-width: 1180px) {
+  .memes-list__item label {
+    padding: 0.15rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .memes-list__item label {
+    padding: 0.1rem;
+  }
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 60%;
+  margin: 0 auto;
+  transition: opacity 1s ease-in;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.checkbox {
+  display: none;
+}
+
+input[type='checkbox']:checked + .image {
+  opacity: 1;
+  height: 60%;
+}
+
+@media (hover: hover) {
+  label:hover {
+    cursor: pointer;
+  }
+
+  label:hover .image {
+    opacity: 1;
+    height: 60%;
+  }
+
+  .memes-list:hover .plus {
+    opacity: 1;
+    height: 2rem;
+  }
+
+  label:hover .plus {
+    transform: rotate(-45deg);
+  }
+}
